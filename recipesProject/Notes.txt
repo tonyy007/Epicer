@@ -2,3 +2,6 @@ https://www.youtube.com/watch?v=06pWsB_hoD4&feature=youtu.be:
 
 backend going in the background on a specific port
 semantic UI react/css
+
+making changges for the sake of it
+so eh
