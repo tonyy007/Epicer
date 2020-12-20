@@ -14,11 +14,10 @@ session = tf.compat.v1.Session(config=config)
 tf.compat.v1.keras.backend.set_session(session)
 
 
-
 class ingredientClassifier:
     def __init__(self, model_fpath):
         self.model = keras.models.load_model(model_fpath)
-        self.cached_ingredients = ['egg', 'rice', 'cinnamon', 'flour', 'yeast']
+        self.cached_ingredients = ['egg', 'oats', 'flour']
         # above line is within class definition for demo purposes
 
     def add_to_cache(self, ingredient):
@@ -35,7 +34,7 @@ class ingredientClassifier:
 
     def urls_from_image(self, fpath):  # fpath: filepath of image to be classified by CNN -> JSON object
         prediction = self._id_image(fpath)
-        self.add_to_cache(prediction) #TODO: add to cache with internal function
+        self.add_to_cache(prediction)
 
         return self._query_cached_items()
 
